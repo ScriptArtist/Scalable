@@ -1,4 +1,12 @@
 # Scalable
+Makes the elements scalable to fit inside the container area.
+
+### Demo
+[Live examples][github_link]
+
+![Demo](https://scriptartist.github.io/Scalable/images/demo1.gif)
+
+[github_link]:https://scriptartist.github.io/Scalable/
 
 ### Install
 
@@ -22,7 +30,4 @@ var scalable = new Scalable(element, options);
 + `maxWidth`: Maximum width of an element.
 + `minScale`: Minimum scale of an element.
 + `maxScale`: Maximum width of an element.
-
-
-### Example
 
