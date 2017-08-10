@@ -24,17 +24,17 @@ class Scalable {
         this.containerElement.style.position = "relative";
         this.element.style.position = "absolute";
         //this.element.style.transformOrigin = this.options.transformOrigin || "left center";
-        this.element.style.whiteSpace = "nowrap";
+     //   this.element.style.whiteSpace = "nowrap";
 
         // Events
         window.addEventListener('resize', this.update.bind(this));
         this.element.addEventListener('DOMSubtreeModified', this.update.bind(this));
 
-        var elementEvent = new ResizeSensor(this.element, this.update().bind(this));
-        var containerElementEvent = new ResizeSensor(this.containerElement, this.update().bind(this));
+        var elementEvent = new ResizeSensor(this.element, this.update.bind(this));
+        var containerElementEvent = new ResizeSensor(this.containerElement, this.update.bind(this));
 
         // initial update
-        setTimeout(this.update().bind(this), 0);
+        setTimeout(this.update.bind(this), 0);
     }
 
     update() {

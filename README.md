@@ -6,7 +6,7 @@ Makes the elements scalable to fit inside the container area.
 
 ![Demo](https://scriptartist.github.io/Scalable/images/demo1.gif)
 
-[github_link]:https://scriptartist.github.io/Scalable/
+[github_link]:https://scriptartist.github.io/Scalable/#demo
 
 ### Install
 
@@ -17,7 +17,7 @@ npm install scalable --save-dev
 ### Usage
 
 ```sh
-var scalable = new Scalable(element, options);
+var scalable = new Scalable(containerEl, options);
 ```
 
 ### Options

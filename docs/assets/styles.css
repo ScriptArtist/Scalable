@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+html,body {
+    height: 100%;
+}
+
+body {
+    margin-top: 50px;
+    /*background: #e2e2e2;*/
+
+}
+body .card {
+    width: 800px;
+    height: 480px;
+    background: transparent;
+    margin: auto;
+    /*            position: absolute;
+                left: 0;
+                right: 0;
+
+                top: 0;
+                bottom: 0;*/
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+}
+body .card_left {
+    width: 40%;
+    height: 480px;
+    float: left;
+    overflow: hidden;
+    background: transparent;
+}
+body .card_left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    position: relative;
+}
+body .card_right {
+    width: 60%;
+    float: left;
+    background: #000000;
+    height: 480px;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+}
+body .card_right h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 40px;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 40px;
+    letter-spacing: 1px;
+}
+body .card_right__details ul {
+    list-style-type: none;
+    padding: 0 0 0 40px;
+    margin: 10px 0 0 0;
+}
+body .card_right__details ul li {
+    display: inline;
+    color: #e3e3e3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 40px 0 0;
+}
+body .card_right__rating__stars {
+    position: relative;
+    right: 160px;
+    margin: 10px 0 10px 0;
+    /***** CSS Magic to Highlight Stars on Hover *****/
+    /* hover previous stars in list */
+}
+body .card_right__rating__stars fieldset, body .card_right__rating__stars label {
+    margin: 0;
+    padding: 0;
+}
+body .card_right__rating__stars .rating {
+    border: none;
+}
+body .card_right__rating__stars .rating > input {
+    display: none;
+}
+body .card_right__rating__stars .rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    display: inline-block;
+    content: "\f005";
+    font-family: FontAwesome;
+}
+body .card_right__rating__stars .rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+body .card_right__rating__stars .rating > label {
+    color: #ddd;
+    float: right;
+}
+body .card_right__rating__stars .rating > input:checked ~ label,
+body .card_right__rating__stars .rating:not(:checked) > label:hover,
+body .card_right__rating__stars .rating:not(:checked) > label:hover ~ label {
+    color: #FFD700;
+}
+body .card_right__rating__stars .rating > input:checked + label:hover,
+body .card_right__rating__stars .rating > input:checked ~ label:hover,
+body .card_right__rating__stars .rating > label:hover ~ input:checked ~ label,
+body .card_right__rating__stars .rating > input:checked ~ label:hover ~ label {
+    color: #FFED85;
+}
+body .card_right__review p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 0 40px 0 40px;
+    letter-spacing: 1px;
+    margin: 10px 0 10px 0;
+    line-height: 20px;
+}
+body .card_right__review a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 0 0 0 40px;
+    color: #ffda00;
+    margin: 0;
+}
+body .card_right__button {
+    padding: 0 0 0 40px;
+    margin: 30px 0 0 0;
+}
+body .card_right__button a {
+    color: #ffda00;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #ffda00;
+    padding: 10px 10px 10px 40px;
+    font-size: 12px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/COMdoWZ.png);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 7% 50%;
+    border-radius: 5px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+body .card_right__button a:hover {
+    color: #000000;
+    background-color: #ffda00;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/rFQ5dHA.png);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    cursor: pointer;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.container-text {
+    position: absolute;
+    transform: translateY(-100%);
+    font-family: sans-serif;
+    color: blue;
+}
+
+.card-container {
+    border: solid 2px blue;
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+
+/* Owerride bootstrap */
+
+.jumbotron {
+    background: white;
+}
+
+code {
+    background-color: rgba(27,31,35,0.05);
+    color: black;
+}
+
+.bs-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+
+.bs-example {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bs-example+.highlight {
+    margin: -15px -15px 15px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+}
+
+.bs-example+.highlight {
+    margin-top: -16px;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
