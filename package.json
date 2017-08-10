@@ -1,6 +1,6 @@
 {
   "name": "scalable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ScriptArtist/Scalable.git"
   },
-  "author": "",
+  "author": "Alexander Ostapenko <alexander.silverman25@gmail.com> (https://scriptartist.github.io/Scalable/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ScriptArtist/Scalable/issues"
