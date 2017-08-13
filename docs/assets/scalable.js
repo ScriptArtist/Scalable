@@ -337,6 +337,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Scalable = function () {
     function Scalable(containerElement, options) {
+        var _this = this;
+
         _classCallCheck(this, Scalable);
 
         if ((typeof containerElement === "undefined" ? "undefined" : _typeof(containerElement)) == 'object') {
@@ -362,14 +364,28 @@ var Scalable = function () {
         //   this.element.style.whiteSpace = "nowrap";
 
         // Events
-        window.addEventListener('resize', this.update.bind(this));
-        this.element.addEventListener('DOMSubtreeModified', this.update.bind(this));
+        window.addEventListener('resize', function () {
+            return _this.update();
+        });
 
-        var elementEvent = new _ResizeSensor2.default(this.element, this.update.bind(this));
-        var containerElementEvent = new _ResizeSensor2.default(this.containerElement, this.update.bind(this));
+        var observer = new MutationObserver(function (mutations) {
+            _this.update();
+            // clear mutation stack to omit infinity loop
+            observer.takeRecords();
+        });
+        observer.observe(this.element, { attributes: true, childList: true, characterData: true, subtree: true });
+
+        var elementEvent = new _ResizeSensor2.default(this.element, function () {
+            return _this.update();
+        });
+        var containerElementEvent = new _ResizeSensor2.default(this.containerElement, function () {
+            return _this.update();
+        });
 
         // initial update
-        setTimeout(this.update.bind(this), 0);
+        setTimeout(function () {
+            return _this.update();
+        });
     }
 
     _createClass(Scalable, [{
