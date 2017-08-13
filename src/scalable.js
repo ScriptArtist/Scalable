@@ -27,14 +27,20 @@ class Scalable {
      //   this.element.style.whiteSpace = "nowrap";
 
         // Events
-        window.addEventListener('resize', this.update.bind(this));
-        this.element.addEventListener('DOMSubtreeModified', this.update.bind(this));
+        window.addEventListener('resize', () => this.update());
 
-        var elementEvent = new ResizeSensor(this.element, this.update.bind(this));
-        var containerElementEvent = new ResizeSensor(this.containerElement, this.update.bind(this));
+        var observer = new MutationObserver((mutations) => {
+            this.update();
+            // clear mutation stack to omit infinity loop
+            observer.takeRecords();
+        });
+        observer.observe(this.element, { attributes: true, childList: true, characterData: true, subtree: true });
+
+        var elementEvent = new ResizeSensor(this.element, () => this.update());
+        var containerElementEvent = new ResizeSensor(this.containerElement, () => this.update());
 
         // initial update
-        setTimeout(this.update.bind(this), 0);
+        setTimeout(() => this.update());
     }
 
     update() {
