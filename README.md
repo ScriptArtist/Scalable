@@ -30,10 +30,3 @@ var scalable = new Scalable(containerEl, options);
 + `maxWidth`: Maximum width of an element.
 + `minScale`: Minimum scale of an element.
 + `maxScale`: Maximum width of an element.
-
-<br/>
-<br/>
-
-<p align="center">
-  <a href="https://www.patreon.com/user?u=7381058"><img src="https://scriptartist.github.io/Scalable/images/PatreonButton.png?raw=true" alt="Sublime's custom image"/></a>
-</p>
