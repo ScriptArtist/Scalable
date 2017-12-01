@@ -1,5 +1,5 @@
 # Scalable
-Makes the elements scalable to fit inside the container area.
+Makes the UI elements scalable to fit inside the container area.
 
 ### Demo
 [Live examples][github_link]
