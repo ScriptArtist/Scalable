@@ -11,7 +11,7 @@ Makes the elements scalable to fit inside the container area.
 ### Install
 
 ```sh
-npm install scalable --save-dev
+npm install scalable --save
 ```
 
 ### Usage
