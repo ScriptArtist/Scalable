@@ -2,7 +2,7 @@
   "name": "scalable",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "src/scalable.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
